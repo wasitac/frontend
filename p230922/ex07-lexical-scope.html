@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>lexical scope</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>lexical scope</h1>
+<script>
+  var num = 5;
+
+  function you() {
+    var num = 500;
+    console.log('[you() 함수 내에서 함수 need 호출]')
+    need();
+  }
+
+  function need() {
+    console.log('need() 함수 내에서 변수 num 접근 >> ', num);
+  }
+
+  console.log('you() 호출');
+  you();
+  console.log('need() 호출');
+  need();
+</script>
+</body>
+</html>

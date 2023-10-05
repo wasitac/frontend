@@ -1,0 +1,51 @@
+<!-- pseudo-class selector
+가상 클래스 셀렉터
+특정 상태에 따라 스타일을 정의 할 때 사용
+
+마우스 올려놨을 때 
+링크를 방문하기 전/후
+클릭된 상태일 때
+포커스 상태일 때
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>가상 클래스</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* visited link */
+      a:visited {
+        color: cadetblue;
+      }
+      a:link {
+        color: brown;
+      }
+      /* 마우스를 올려놨을 때 */
+      /* hover는 link와 visited 아래에 와야한다 */
+      a:hover {
+        color: #f00;
+      }
+      /* 클릭했을 때 */
+      a:active {
+        color: blue;
+      }
+      a:focus {
+      }
+    </style>
+  </head>
+  <body>
+    <h1>pseudo-class</h1>
+    <ol>
+      <li><a href="#">naver</a></li>
+      <li><a href="#">daum</a></li>
+      <li><a href="#">atom</a></li>
+    </ol>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam itaque voluptate repudiandae debitis deleniti
+      dicta architecto laborum suscipit doloribus at est blanditiis qui ut dolor temporibus tempora ullam, voluptates
+      eum.
+    </p>
+  </body>
+</html>

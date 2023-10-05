@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>리턴값이 함수명</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>리턴값이 함수명</h1>
+    <script>
+      /* 
+      [중첩 함수]
+       */
+      // 1. 함수 정의
+      function createHello() {
+        document.write('[createHello 함수 시작]<br>');
+        function hello(name) {
+          document.write('>>> hello 함수 시작<br>');
+          document.write(name + '님 안녕~<br>');
+          document.write('>>> hello 함수 종료<br>');
+        }
+        hello('홍길동길')
+        document.write('[createHello 함수 종료]<br>');
+        return hello;
+      }
+      // 2. 함수 호출
+      var result = createHello();
+      result('박보검');                                                                                                                       
+      document.write('프로그램 종료');
+    </script>
+  </body>
+</html>

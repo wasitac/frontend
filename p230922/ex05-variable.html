@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>scope</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>scope</h1>
+<script>
+  var a_one = 1;
+  for(var a_i = 0; a_i < 3; a_i++){
+    console.log('a_i >>', a_i);
+  }
+  for(let a_idx = 0; a_idx < 3; a_idx++){
+    console.log('idx >>', a_idx);
+  }
+
+  console.log('a_one >>', a_one);
+  console.log('a_i >>', a_i);
+  console.log('a_ide >>', a_idx);
+</script>
+</body>
+</html>

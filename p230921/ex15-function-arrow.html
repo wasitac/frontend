@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>화살표 함수</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>화살표 함수</h1>
+    <script>
+      // // 1. 함수 선언식
+      // function sum(a, b) {
+      //   return a + b;
+      // }
+
+      // // [함수 호출]
+      // var value = sum(3, 5);
+      // document.write('value >> ', value);
+
+      // // 2. 함수 표현식
+      // var sum = function (a, b) {
+      //   return a + b;
+      // };
+
+      // // [함수 호출]
+      // var value = sum(3, 5);
+      // document.write('value >> ', value);
+
+      // 3. 화살표 함수
+      // arrow function (JAVA Lambda)
+      // 한줄이면 body 중괄호 생략가능.
+      // 생략하면 return 못쓰고 화살표 오른쪽 결과값을 무조건 리턴함
+
+      var sum = (a, b) => a + b;
+
+      // 3-2) body의 중괄호를 적으면 return 키워드를 명시해야 한다.
+      var sum = (a, b) => {
+        return a + b;
+      };
+
+      // [함수 호출]
+      var value = sum(3, 5);
+      document.write('value >> ', value);
+    </script>
+  </body>
+</html>

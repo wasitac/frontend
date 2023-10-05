@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>상위 엘리먼트에 접근</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>첫 번째</li>
+        <li>두 번째</li>
+        <li>세 번째</li>
+      </ul>
+      <div>Lorem ipsum dolor sit amet.</div>
+      <div>Lorem ipsum dolor sit amet.</div>
+    </div>
+    <script>
+      const li = document.querySelector('li');
+      li.addEventListener('click', (event) => {
+        console.log('클릭함');
+        console.log(event.target.parentElement);
+        const parentElement = event.target.parentElement;
+        parentElement.remove();
+      });
+    </script>
+  </body>
+</html>

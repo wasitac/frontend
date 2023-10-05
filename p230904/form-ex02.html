@@ -1,0 +1,40 @@
+<!-- autofocus, placeholder, action, reset-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- 따로 action을 요청하지않으면 submit시 현재 페이지를 요청 -->
+    <form action="test-page.html" method="get">
+      <fieldset>
+        <legend>회원가입</legend>
+        <div>
+          <label for="user_name">이름 : </label>
+          <input type="text" name="user_name" id="user_name" placeholder="이름을 입력하세요" autofocus />
+        </div>
+        <div>
+          <label for="city">거주지역</label>
+          <select name="city" id="city" size="3" multiple>
+            <option value="seoul">서울</option>
+            <option value="incheon">인천</option>
+            <option value="daegu" selected>대구</option>
+            <option value="jeju">제주</option>
+          </select>
+        </div>
+        <div>
+          <label for="info">간단한 소개</label>
+          <textarea name="info" id="info" cols="30" rows="10" placeholder="간단한 소개를 작성하세요."></textarea>
+        </div>
+      </fieldset>
+      <div>
+        <!-- button은 content가 있다. 
+        <button type="button">회원가입</button> -->
+        <input type="reset" value="취소" />
+        <input type="submit" value="회원가입" />
+      </div>
+    </form>
+  </body>
+</html>

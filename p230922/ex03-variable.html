@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>변수 종류</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      console.log('<head> 내 script');
+      var head_var = 100;
+      let head_let = 200;
+      const head_const = 300;
+      console.log('head_var', head_var);
+      // 분리된 script의 전역변수는 호이스팅이 안돼있다.
+      /* script 전체를 하나의 파일이라고 보면, 
+      아래쪽 스크립트는 아직 파일에 적히지 않았다고 생각해도 될거같다. */
+      // console.log('head_var', body_var);
+      function sum(num1, num2) {
+        console.log('덧셈 결과 >> ', (num1 + num2));
+      }
+    </script>
+  </head>
+  <body>
+    <h1>변수 종류</h1>
+    <script>
+      /* 
+      - var는 함수 레벨 스코프, let과 const는 블럭 레벨 스코프
+      - var는 선언된 변수를 선언 전에 접근 가능하지만, 
+      let과 const 불가능 (에러 발생)
+      - var는 이미 선언된 이름과 같은 이름의 변수를 여러 선언 가능하지만,
+      let과 const 불가능(에러 발생)
+      - var와 let은 변수 선언과 동시에 초기화를 하지 않아도 되지만, 
+      const는 반드시 초기값을 설정해야 함.
+      - var와 let은 값 변경이 가능하지만,
+      const는 값 변경이 불가능.
+
+      [scope]
+      - 전역 스코프(global scope)
+        : <script> 내 선언된 변수
+        : 어디서든지 접근 가능
+      - 지역 스코프(local scope)
+        : {} 내 선언된 변수
+        : 해당 영역 내에서만 접근
+        : function level scope
+        : block level scope
+      */
+      console.log('<body> 내 script');
+      var body_var = 100;
+      console.log('body  _var >> ', body_var);
+      console.log('head_var >> ', head_var);
+      console.log('head_let >> ', head_let);
+      console.log('head_const >> ', head_const);
+
+      sum('뭉게', '구름');
+    </script>
+
+  </body>
+</html>

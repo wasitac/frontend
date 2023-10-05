@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* 
+[position]
+static | relative | absolute | fixed | sticky
+1. static
+  - 원래 자기 자리 (default)
+  - top, left 등 인식 안됨 : 위치 이동 안 됨
+2. relative
+  - 상대적인
+  - 기존 영역 그대로 인식
+  - 원래 자기 위치에서 이동
+  - 즉, static 기준으로 이동
+3. absolute
+  - 절대적인
+  - 기존 영역 인식 안함
+  - 부모(상위 엘리먼트) 위치 기준으로 이동
+  - 부모는 static제외
+  - 부모가 body일 경우, 웹 브라우저 기준
+4. fixed
+  - absolute와 비슷
+  - 화면 스크롤 되어도 그 위치 그대로
+  - 무조건 웹 브라우저 기준
+*/
+.box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 400px;
+  padding: 20px;
+  background-color: rgba(255, 255, 0, 0.7);
+  font: bold 16px sans-serif;
+}

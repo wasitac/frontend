@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>객체 축약 표현</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>객체 축약 표현</h1>
+    <script>
+      const name = '박보검';
+      const age = 25;
+      // property의 name과 value 같을 때
+      // 1 . 원래는
+      // const info = {
+      //   name: name,
+      //   age: age,
+      // };
+
+      // 2. 축약 표현
+      const info = { name, age };
+      console.log(info);
+    </script>
+  </body>
+</html>

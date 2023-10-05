@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>구조분해 할당</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>[객체] 구조분해 할당</h1>
+    <script>
+      const info = {
+        name: '홍길동',
+        age: 25,
+      };
+
+      // [함수 정의]
+      // 함수 선언식
+      // 반환형 메서드명(매개변수) {
+      //   명령어;
+      //   return 값;
+      // }
+
+      // 객체의 property를 정확히 알고 접근하는 상황
+      // 1) 매개변수 1개
+      // function show_info(args) {
+      //   console.log('이름 : ', args.name);
+      //   console.log('나이 : ', args.age);
+      // }
+
+      // 2-1) 매개변수 : 구조분해
+      // function show_info({ name, age }){
+      //   console.log('이름 :', name);
+      //   console.log('나이 :', age);
+      // }
+
+      // 2-2) 매개변수 : 구조분해
+      // 새로운 변수명으로 지정
+      function show_info({ name: new_name, age: new_age }) {
+        console.log('이름 :', new_name);
+        console.log('나이 :', new_age);
+      }
+      
+      // 함수 호출
+      show_info(info);
+    </script>
+  </body>
+</html>

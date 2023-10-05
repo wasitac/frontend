@@ -1,0 +1,16 @@
+@charset "utf-8";
+.one {
+  width: 1800px;
+  height: 1500px;
+  background-image: url(../img/pile-1651945_1280.jpg);
+  background-repeat: no-repeat;
+  background-color: #6ae;
+  background-position: 50%;
+  background-size: 600px 600px;
+}
+.two {
+  width: 600px;
+  height: 600px;
+  background-color: aqua;
+  object-fit: fill;
+}

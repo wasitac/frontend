@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>문자열 함수</h1>
+    <script>
+      // const는 선언할 때 초기화 해야 한다
+      const today = 'Good~';
+
+      // today = 'hi'; // 값 변경 금지
+      console.log(today);
+
+      // 문자열 길이
+      console.log(today.length);
+
+      // [특정 문자 변경]
+      // o를 찾아서 ap-로 변경
+      console.log(today.replace('o', 'ap-'));
+      console.log(today.replaceAll('o', 'ap-'));
+
+      // [특정 위치의 문자 추출]
+      // 1. [문법] 문자열.substring(시작 인덱스, 끝 인덱스);
+      console.log(today.substring(1, 4));
+      //음수 지원 안함
+      console.log(today.substring(-1));
+
+      // 2. [문법] 문자열.slice(시작 인덱스, 끝 인덱스)
+      console.log(today.slice(1, -1));
+      // 끝 인덱스를 표기하지 않으면 끝까지 출력(바운드 바깥쪽 인덱스를 써야하는 일을 없애려고)
+      console.log(today.slice(-2));
+
+      // 특정 문자 기준으로 분리
+      // 배열로 리턴
+      // 기준으로 사용된 문자는 배열 요소에 없음
+      console.log(today.split("d"));
+
+      // 특정 문자 추가
+      // [문법] 문자열.padStart(문자열 전체 길이, 추가할 문자)
+      console.log(today.padStart(10, '*'));
+      console.log(today.padEnd(10, '*'));
+
+      // 특정 문자 찾기
+      // boolean return type
+      console.log(today.includes('g'));
+
+      // 특정 문자 위치(index)
+      console.log(today.indexOf('o'));
+      console.log(today.indexOf('od'));
+      console.log(today.indexOf('bad'));
+
+      // 반복
+      console.log(today.repeat(3));
+
+      //case
+      console.log(today.toUpperCase());
+      console.log(today.toLowerCase());
+
+      //trim
+      //문자열 중간 공백은 제거못함
+      const say = '   H  i~   ';
+      console.log(say);
+      console.log(say.trimStart());
+      console.log(say.trimEnd());
+      console.log(say.trim());
+    </script>
+  </body>
+</html>

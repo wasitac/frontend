@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>콜백 함수</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>콜백 함수</h1>
+    <script>
+      /* 
+      [콜백 함수]
+      함수 매개변수가 함수명을 받음 => 함수 내에서 함수 호출
+      1) 함수 내부의 값을 외부 함수로 내보낼 때
+        return문과 비슷
+      2) 비동기 함수 결과값을 처리하기 위해
+      [문법]
+      function 함수명(callback) {
+        callback();
+      }
+      */
+      // [함수 선언식] 함수 정의 : callback
+      function add(num1, num2, callback) {
+        var result = num1 + num2;
+        callback(result);
+      }
+
+      // [함수 선언식]
+      // function addResult(value) {
+      //   console.log('덧셈 결과 >> ', value);
+      // }
+      // [함수 표현식]
+      const addResult = (value) => console.log('덧셈 결과 >> ', value);
+      // function addResultTwo(value) {
+      //   console.log('합 >> ', value);
+      // }
+      const addResultTwo = function (value) {
+        console.log('합 >> ', value);
+      }
+
+      add(3, 5, addResult);
+      add(1, 4, addResultTwo);
+      // 보통 익명함수를 넣지 함수명을 넣지 않는다.
+      add(10, 20, function(value) {
+        console.log('덧셈 결과 >> ', value)
+      });
+//=>
+      add(10, 20, (value) => {
+        console.log('덧셈 결과 >> ', value)
+      });
+//생략
+      add(10, 20, value => console.log('덧셈 결과 >> ', value));
+    </script>
+  </body>
+</html>

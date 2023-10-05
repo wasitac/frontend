@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>객체</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>객체</h1>
+  <script>
+       // [객체]
+      // property
+      // {name:value}
+      var obj = {
+        name: '홍길동',
+        age: 25,
+      };
+      console.log(obj);
+      console.log(typeof obj);
+
+      // [property 접근]
+      // 1) . 접근
+      console.log(obj.name);
+      // 2) [] 접근
+      // 대괄호 접근은 name(key)를 문자열로 넣어야 한 다
+      console.log(obj['age']);
+  </script>
+
+</body>
+</html>

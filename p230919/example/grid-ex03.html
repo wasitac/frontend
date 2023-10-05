@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  background-color: #2196F3;
+  padding: 10px;
+  width: 500px;
+  height: 500px;
+
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto auto;
+
+  /* 가로 정렬 */
+  justify-content: space-evenly;
+  justify-content: space-around;
+  justify-content: space-between;
+  justify-content: start;
+  justify-content: end;
+  justify-content: center;
+  
+  /* 세로 정렬 */
+  /* align-content: space-evenly; */
+  /* align-content: space-around; */
+  /* align-content: space-between; */
+  /* 위의 3개는 gap을 무시해 */
+
+  align-content: start;
+  align-content: end;
+  align-content: center;
+}
+
+.grid-item {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>The column-gap Property</h1>
+
+<p>Use the <em>column-gap</em> property to adjust the space between the columns:</p>
+
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+
+</body>
+</html>
+
+

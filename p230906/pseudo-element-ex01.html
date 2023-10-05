@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>가상 엘리먼트</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      h1::before {
+        content: 'before';
+        color: red;
+      }
+      h1::after {
+        content: 'after';
+        color: steelblue;
+      }
+      div::first-letter {
+        font-size: 2em;
+        font-weight: bold;
+      }
+      div::first-line {
+        background-color: #ff0;
+      }
+      p::selection {
+        background-color: aliceblue;
+        color: thistle;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>가상 엘리먼트</h1>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptas architecto corporis libero? Assumenda
+      voluptatibus ad facilis ullam doloribus fugit dolore pariatur quis, repellendus nemo incidunt nobis omnis sapiente
+      provident.
+    </div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur unde esse tenetur eos id. Inventore incidunt,
+      quidem aliquid, perferendis minus pariatur, reprehenderit ab maxime nesciunt error corrupti earum. Ullam, porro?
+      Laborum iure, dicta tempore neque velit nobis odit quidem quos. Quibusdam doloremque eum dolor maiores quam porro
+      excepturi aperiam delectus voluptate atque culpa aliquam fugit nihil, suscipit tenetur officia pariatur.
+    </p>
+  </body>
+</html>

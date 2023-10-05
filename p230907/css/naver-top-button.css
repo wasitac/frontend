@@ -1,0 +1,20 @@
+@charset "utf-8";
+#wrap {
+  background-color: #999;
+  width: 200px;
+}
+.content-top::before {
+  display: inline-block;
+  content: "";
+  background-image: url(../img/naver.png);
+  background-size: 435px 423px;
+  background-position: -346px -329px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.content-top:hover::before {
+  background-position: -342px -308px;
+  background-color: #ebebeb;
+}

@@ -1,0 +1,30 @@
+@charset "utf-8";
+.box {
+  border: 3px double #49d;
+  padding: 20px;
+  background-color: #ddf;
+  /* 
+  [투명도]
+    0~1
+    상속됨
+  */
+  /* opacity: 0.5; */
+  width: 1000px;
+  height: 1500px;
+  background-image: url(../img/pile-1651945_1280.jpg);
+  background-repeat: no-repeat;
+  /* [위치지정]
+  /* 방향으로 설정 */
+  background-position: left center;
+  /* 수평 수직 비율로 설정*/
+  background-position: 50% 0%;
+  /* 픽셀로 설정 */
+  background-position: -265px -200px;
+  /* 스크롤해도 배경이 고정된다 */
+  background-attachment: fixed;
+  /* shorthand */
+  background: #888 url(../img/pile-1651945_1280.jpg) no-repeat -265px -200px;
+}
+.box p {
+  /* opacity: 0.8; */
+}

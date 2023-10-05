@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>미디어 쿼리</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* 
+    [미디어 쿼리]
+    일반 style보다 아래에 작성
+    특정 기기에서 스타일 다르게 적용
+    미디어 타입 : all, screen(화면), print(프린터), tv(텔레비전)
+
+    max-width : 최대 너비 ~이하
+    min-width : 최소 너비 ~이상
+    */
+      body {
+        font: 12px/1.5 sans-serif;
+        color: #555;
+      }
+      #wrap {
+        width: 970px;
+        margin: 0 auto;
+      }
+      @media screen and (min-width: 1200px) {
+        body {
+          color: #0fd;
+          font-size: 19px;
+          background-color: #ddd;
+        }
+      }
+      /* 범위일 경우
+      min과 max의 범위가 겹치지 않도록 주의
+       */
+      @media screen and (min-width: 481px) and (max-width: 970px) {
+        #wrap {
+          width: auto;
+          background-color: #ff0;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        body {
+          color: #2ef;
+          font-size: 19px;
+          background-color: aquamarine;
+        }
+        /* #wrap {
+          background-color: #f22;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>logo</h1>
+      <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, temporibus iste dicta recusandae aperiam
+        nobis rem dignissimos, consequatur cumque facilis, odio quo aliquid minima possimus magni saepe. Illo, neque
+        officiis.
+      </div>
+    </div>
+  </body>
+</html>

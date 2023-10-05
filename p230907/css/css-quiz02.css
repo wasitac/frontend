@@ -1,0 +1,25 @@
+@charset "uft-8";
+/* :root {
+  --height: 100px;
+} */
+* {
+  font: 12px sans-serif, serif;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+a {
+  font: 14px bold sans-serif;
+  text-decoration: none; 
+  color: black;
+  display: block;
+  border: 3px solid;
+  padding: 15px 30px;
+
+  /* width/height를 준다고 가정했을 때 가운데 정렬 */
+  /* width: 200px;
+  height: var(--height);
+  text-align: center;
+  line-height: var(--height); */
+}

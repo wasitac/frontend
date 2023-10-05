@@ -1,0 +1,17 @@
+@charset "uft-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+#wrap {
+  width: 800px;
+  background-color: #ff1;
+  margin: 0 auto;
+}
+#wrap h1 {
+  padding: 15px 0;
+}
+#wrap .thumb {
+  float: left;
+  margin: 0 15px 15px 0;
+}

@@ -1,0 +1,22 @@
+@charset "utf-8";
+div {
+  background-color: #ff0;
+}
+.box {
+  border: 3px solid #00f;
+  /* 인라인 블록
+  한 라인 안에 여러 요소를 넣고싶어서 인라인
+  수직 패딩/마진을 주고싶어서 블록
+  합쳐서 인라인-블록*/
+  display: inline-block;
+  width: 130px;
+  height: 100px;
+  /* 블록의 마진은 마진끼리 겹치는데 
+  인라인의 마진은 겹치지 않음 
+  근데 인라인 마진은 왼쪽 오른쪽 밖에 안됨
+  패딩도 되긴하는데 제대로 안됨.. */
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  line-height: 100px;
+}

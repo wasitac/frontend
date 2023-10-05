@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>칼라</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      h2 {
+        color: #f55;
+        background-color: black;
+      }
+      h2.one {
+        color: rgba(44, 255, 55, 0.1);
+      }
+      h2.two {
+        color: #e9ffeb;
+      }
+      h2.three#three {
+        /* hsl(색, 채도, 명도) 
+        색    : 0에서 360 사이의 색상환 각도
+              : 0-빨간색, 120-녹색, 240-파란색
+        채도  : 색의 강도, 선명도, 쨍한 정도
+              : 채도가 낮으면 탁하고, 높으면 선명
+        명도  : 빛의 밝기
+              : 높은 명도는 흰색이고, 낮은 명도는 검정
+              : 0-검정, 50-밝거나 어둡지 않은 원색, 100-흰색*/
+        color: hsl(120, 10, 50);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Color</h1>
+    <h2 class="one">css basic</h2>
+    <h2 class="two">css basic</h2>
+    <h2 class="three" id="three">css basic</h2>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius unde fuga voluptates voluptate iste asperiores,
+      nihil facilis ad cum ipsa exercitationem eveniet quaerat inventore aliquam nisi beatae id alias ea.
+    </div>
+  </body>
+</html>

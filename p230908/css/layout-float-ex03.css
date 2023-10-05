@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+}
+#wrap {
+  width: 800px;
+  background-color: #dd0;
+  margin: 0 auto;
+}
+#wrap h1 {
+  padding: 15px 0;
+}
+#wrap .thumb {
+  float: left;
+  /* display: inline-block; */
+  border: 3px solid;
+}
+
+/* float 해제 */
+/* 방법 1 (권장)*/
+/* #wrap .image_list::after {
+  display: block;
+  content: '';
+  clear: both;
+} */

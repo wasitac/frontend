@@ -1,0 +1,25 @@
+<!-- 선택자 우선순위
+element < class < id < element+class+id < inline < !important -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>선택자 우선순위</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .sample#sample{background-color: #ff6;}
+      div#sample{background-color: #f0f;}
+      #sample{background-color: #c00;}
+      .sample{background-color: #ccc;}
+      div{background-color: #080;}
+      div{background-color: #dd0 !important;}
+    </style>
+  </head>
+  <body>
+    <h1>선택자 우선순위</h1>
+    <div class="sample" id="sample" style="background-color: whitesmoke;">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, numquam eligendi voluptatibus earum aliquid
+      quaerat sapiente esse laborum expedita provident illo quod modi commodi. Error in sunt consectetur optio iusto.
+    </div>
+  </body>
+</html>

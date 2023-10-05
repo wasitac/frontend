@@ -1,0 +1,17 @@
+@charset "UTF-8";
+span {
+  color: #017711;
+}
+div > span {
+  color: #ff0000;
+}
+#ex-css span {
+  background-color: aqua;
+}
+.second-tag span {
+  background-color: cadetblue;
+}
+h1,
+h2 {
+  color: blue;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>반응형 웹</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font: 12px/1.5 sans-serif;
+      }
+      #wrap {
+        width: 600px;
+        margin: 0 auto;
+      }
+      @media screen and (orientation: portrait) {
+        body {
+          background-color: #eee;
+        }
+        h1::after {
+          content: '세로가 더 길다~';
+          font-size: 1.2em;
+          line-geight: 2em;
+          color: #0f0;
+        }
+      }
+      /* 가로가 길다 */
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: #ff0;
+        }
+        h1::before {
+          content: '가로가 더 길다!';
+          color: #f00;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>LOGO</h1>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nisi enim ea excepturi repudiandae voluptates et
+        at aut, a officia! Fuga quae corporis recusandae. Mollitia, labore! Necessitatibus nihil consequatur facilis.
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>함수 선언식</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>함수 선언식</h1>
+    <script>
+      /* 
+    [사용자 정의 함수]
+    <<함수 정의>>
+    function 함수명(매개변수){
+      명령문;
+      return 값;
+    }
+    <<함수 호출>>
+    함수명();
+
+    [함수 정의 형태]
+    1. 매개변수 없고 리턴 없음
+    2. 매개변수 없고 리턴 있음
+    3. 매개변수 있고 리턴 없음
+    4. 매개변수 있고 리턴 있음
+
+    [실행 끝]
+    -return
+    -body의 }
+
+    [return 의미]
+    - 함수 실행 끝
+    - 호출한 쪽으로 값을 넘김
+    */
+
+      // 2. [함수 호출]
+      info()
+      info('홍길동');
+      info('홍길동', 25)
+      info('홍길동', 25, 'himedia')
+      // 1. [함수 정의] 매개변수 있고, 리턴없음
+      /*
+      << 특징 >>
+      매개변수와 인수의 타입(자료형)이 동일한지 검사하지 않음
+      매개변수의 개수와 인수의 개수가 같은지 검사하지 않음
+      */
+      function info(name, value) {
+        document.write('name >> ', name);
+        document.write('<br>');
+        document.write('value >> ', value);
+        document.write('<br>');
+        document.write('==================<br>');
+      }
+
+      document.write('함수 실행 완료');
+    </script>
+  </body>
+</html>

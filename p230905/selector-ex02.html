@@ -1,0 +1,71 @@
+<!-- css에서 +, ~ -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>선택자 연습2</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style media="screen">
+      em {
+        background-color: orange;
+      }
+      #header p + p {
+        border: 3px solid black;
+      }
+      #container ol~p {
+        background-color: lightblue;
+      }
+      #container #lead {
+        background-color: lime;
+      }
+      #container .lead {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <h1>css <em>selector</em></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum placeat vero illo ut, eveniet at aspernatur
+          id quasi accusantium amet in eligendi dolor necessitatibus voluptates. Commodi deleniti illo ut minima.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum placeat vero illo ut, eveniet at aspernatur
+          id quasi accusantium amet in eligendi dolor necessitatibus voluptates. Commodi deleniti illo ut minima.
+        </p>
+      </div>
+      <div id="container">
+        <p id="lead">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, labore corporis. Dolorum officia voluptatibus
+          fugiat nam alias accusamus sunt porro? Enim quas quisquam veniam facilis tempora sunt, laudantium ipsa harum.
+        </p>
+        <p class="lead">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero quo repudiandae dolorum sunt dolorem, error
+          ipsa quidem eaque, ratione, voluptatem quam minus voluptates harum inventore laborum sit fuga. Optio, maiores.
+        </p>
+        <div class="lead">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus saepe ad ea voluptatem, unde tenetur.
+          Repellendus facilis provident totam corrupti? Porro aut exercitationem suscipit reprehenderit at, officiis
+          harum voluptatum ea!
+        </div>
+        <ol class="list">
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ol>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, labore doloribus asperiores ab unde sequi.
+          Eum ipsam alias, quos quam molestiae possimus quaerat rerum incidunt ipsa doloremque et excepturi. Ex.
+        </p>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>컴포넌트 연습</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="text"></div>
+    <hr />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      // 1. 리액트 엘리먼트를 변수에 저장
+      const h1 = <h1>안녕하세요</h1>;
+
+      const one = 100;
+      const ul = (
+        // [react element]
+        <ul>
+          <li>첫번째{one}</li>
+          <li>두번째</li>
+          <li>세번째</li>
+        </ul>
+      );
+
+      const app = (
+        <div>
+          {h1}
+          {ul}
+        </div>
+      );
+
+      // 2. 컴포넌트 생성
+      /* 
+      [문법]
+      function 대문자시작(props) {
+      // props : properties(속성들) 약자
+      // 명령어  
+      return (리액트 엘리먼트);
+      } 
+      */
+      const userName = '홍길동';
+
+      function H1({ name, age }) {
+        return (
+          <div>
+            <h1>안녕하세요 {name}님</h1>
+            <div>나이는 {age}세 입니다.</div>
+          </div>
+        );
+      }
+
+      const Ul = () => {
+        return (
+          <ul>
+            <li>첫번째</li>
+            <li>두번째</li>
+          </ul>
+        );
+      };
+
+      const ComponentApp = () => {
+        console.log('컴포넌트 앱');
+        return (
+          <div>
+            <H1 name="박보검" age="25" />
+            <H1 name={userName} age="35" />
+            {H1({ name: '박복자', age: '52' })}
+            <Ul />
+          </div>
+        );
+      };
+
+      const insert = document.getElementById('text');
+      ReactDOM.createRoot(insert).render(ComponentApp());
+    </script>
+  </body>
+</html>

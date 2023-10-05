@@ -1,0 +1,26 @@
+@charset "uft-8";
+.tbl {
+  /* [cell 사이 여백]
+  - collapse | separate */
+  border-collapse: collapse;
+  width: 800px;
+  table-layout: fixed;
+}
+.tbl caption {
+  caption-side: top;
+  /* 캡션 숨기기 */
+  /* display: none; */
+  /* font-size, width, height 사용 */
+  text-indent: -10000em;
+}
+.tbl th,
+.tbl td {
+  border: 1px solid #000;
+  text-align: center;
+}
+.tbl tbody .ex {
+  empty-cells: hide;
+}
+.tbl tbody tr:nth-of-type(2n + 1) {
+  background-color: #995;
+}

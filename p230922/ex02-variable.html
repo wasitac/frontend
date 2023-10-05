@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>변수 종류</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>변수 종류</h1>
+    <script>
+      // 변수 선언 전 접근
+      console.log('a_var >> ', a_var);
+      // console.log('a_let >> ', a_let);
+      console.log('a_const >> ', a_const);
+
+      // [global scope]
+      // 1. [변수 선언]
+      var a_var;
+      let a_let;
+      // 상수(constant)
+      // - cf) 리터럴 (Literal)
+      // - 선언과 동시에 초기화
+      const a_const = 10;
+
+      console.log('a_var >> ', a_var);
+      console.log('a_let >> ', a_let);
+      console.log('a_const >> ', a_const);
+
+      // 2. [값 변경]
+      var a_var = 100; // 초기화
+      // let a_let = 200;    // error
+      a_let = 200; //초기화
+      // let a_const = 300; // error
+      // a_const = 300; // error
+
+      console.log('a_var >> ', a_var);
+      console.log('a_let >> ', a_let);
+      console.log('a_const >> ', a_const);
+    </script>
+  </body>
+</html>

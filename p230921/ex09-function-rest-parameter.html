@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>rest parameter</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>rest parameter</h1>
+    <script>
+
+      /* 
+      rest parameter
+      ...변수명
+
+      */
+      // 1. [함수 정의]
+      function sum(a, b, ...args) {
+        let result = a+b;
+        console.log(result);
+        console.log(args);
+      }
+      // 2. [함수 호출]
+      sum(2, 3);
+      sum(2, 3, 6, 7)
+    </script>
+  </body>
+</html>

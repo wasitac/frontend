@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>함수 표현식</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>함수 표현식</h1>
+    <script>
+      /* 
+    [함수 선언식] 
+    : 선언적 함수, 일반 함수
+    : 함수 정의 전에 호출 가능
+    : 함수 호출 시기에 있어서 제한 없음
+    */
+
+      hi('홍길동');
+
+      function hi(name) {
+        console.log(name + ' 님, 안녕하세요~');
+      }
+
+      var new_hi = hi;
+      new_hi('홍길동2');
+
+      /* 
+    [함수 표현식] 
+    : 익명 함수를 변수에 저장
+    : 함수 정의 전에 호출 불가능
+    */
+
+      // [함수 호출] : 함수 정의 전
+      // hello('박보검');
+
+      // [함수 정의]
+      var hello = function (name) {
+        console.log(name + ', 안녕');
+      };
+
+      // [함수 호출] : 함수 정의 후
+      hello('이미자');
+      const new_hello = hello;
+      new_hello('이미자2');
+      console.log('실행 완료!!!');
+    </script>
+  </body>
+</html>

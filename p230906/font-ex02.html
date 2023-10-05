@@ -1,0 +1,60 @@
+<!-- shorthand -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>폰트 속성</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* 초기화 */
+      html {
+        font-size: 10px;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 12px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        font-weight: normal;
+      }
+      .lead {
+        font-family: sans-serif, serif;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: italic;
+        /* 전부 대문자로 변하고 문장의 시작을 강조 */
+        font-variant: small-caps;
+        /* 기본 단위가 em이어서 생략가능, 폰트 크기 기준 */
+        line-height: 2em;
+      }
+      div {
+        /*shorthand  
+        {font: font-style font-variant font-weight font-size/line-height font-family}
+        
+        The font-size and font-family values are required. If one of the other values is missing, their default value are used.*/
+        font: italic small-caps bold  14px/2 sans-serif, serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>폰트 스타일</h1>
+    <h2>폰트 스타일</h2>
+    <p class="lead">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt officia quae nemo soluta sint officiis quaerat
+      obcaecati inventore laudantium, tempore beatae repellat, minima ullam architecto, sequi dolorem earum quidem!
+      Numquam?
+    </p>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ducimus enim nobis accusantium delectus
+      possimus quos incidunt amet exercitationem aliquid maxime pariatur sit, quo magni tempore dicta labore ipsa
+      quibusdam.
+    </div>
+  </body>
+</html>

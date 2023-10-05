@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>내장 함수</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>내장 함수</h1>
+  <script>
+    /* 
+    [function]
+    내장 함수
+      : 기본적으로 제공되는 함수
+    사용자 정의 함수
+      : 함수 선언식 (선언적 함수, 일반 함수)
+      : 함수 표현식 (익명 함수를 변수에 저장)
+      : 함수 리터럴 (익명 함수)
+      : 화살표 함수 (arrow function)
+    */
+
+    // 내장 함수
+    // eval : 문자열로 표현된 식을 계산하는 함수
+    const sum = eval('1 + 2 + 3');
+    console.log(sum);
+    // parseInt : 문자열을 정수로 변환
+    const num = parseInt('5');
+    console.log(typeof num);
+    console.log(num);
+
+    const num2 = parseInt(2.5);
+    console.log(num2);
+  </script>
+</body>
+</html>

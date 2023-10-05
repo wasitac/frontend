@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>객체 함수</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>객체 함수</h1>
+<script>
+  const number = {
+    one:1,
+    two:2,
+    three:3,
+  };
+  
+  console.log(number);
+  
+  // object의 적적 메서드
+  console.log('모든 key 추출 : ', Object.keys(number));
+  console.log('모든 value 추출 : ', Object.values(number));
+  console.log('key와 value를 하나의 쌍으로 추출 :', Object.entries(number));
+</script>
+</body>
+</html>

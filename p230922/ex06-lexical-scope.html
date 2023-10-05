@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>lexical-scope</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>lexical-scope</h1>
+<script>
+  /* 
+  [Lexical scope]
+  : 함수를 어디에 정의하였는가에 따라 상위 스코프를 결정하는 것
+  */
+  var a_one = 1;
+  var a_two = 2;
+  var a_three = 3;
+
+  // [함수 정의] 함수 선언식
+  function a_outer() {
+    var a_two = 20;
+    var a_three = 30;
+
+    function a_inner() {
+      var a_three = 300;
+      console.log('1. one = ', a_one);
+      console.log('2. two = ', a_two);
+      console.log('3. three = ', a_three);
+    }
+
+    console.log('== inner() 호출 전');
+    a_inner();
+    console.log('== inner() 호출 후');
+  }
+  console.log('== outer() 호출 전');
+  a_outer();
+  console.log('== outer() 호출 후');
+
+</script>
+</body>
+</html>

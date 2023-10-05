@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>객체 축약 표현</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>객체 축약 표현</h1>
+    <script>
+      // 객체 : Object
+      // 1. name과 value가 같을 때
+      const name = '홍길동';
+      const age = 25;
+
+      const obj = { name, age };
+      console.log(obj);
+
+      // 2-1. 값이 익명 함수인 경우
+      // const say = {
+      //   hi: function (){
+      //     console.log("안녕,반가워~");
+      //   },
+      // };
+      // 2-2.
+      const say = {
+        hi: () => console.log('안녕,반가워~'),
+      };
+
+      console.log('say : ', say);
+      console.log('typeof say : ', typeof say);
+    </script>
+  </body>
+</html>

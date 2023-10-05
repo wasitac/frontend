@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body {
+  font: 16px serif;
+}
+
+.content1,
+.content2 {
+  width: 300px;
+  border: 3px solid black;
+}
+.content1 {
+  word-break: break-all;
+}
+.content2 {
+  text-align: justify;
+}
+/* 
+pre
+pre-wrap
+pre-line
+ */
+.white {
+  white-space: pre-line;
+}

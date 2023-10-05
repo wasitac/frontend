@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+ol,
+ul,
+li {
+  /* [bullet] 불릿 제거 */
+  /* list-style: none; */
+}
+
+ul.list {
+  /* [bullet] 불릿 위치 */
+  /*  그냥 들여쓰기가 아니라 리스트 영역 안으로 들어가는건가봐 */
+  list-style-position: inside;
+  list-style-type: hangul-consonant;
+}
+.list li {
+  background-color: aquamarine;
+}

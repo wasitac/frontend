@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>로컬 스토리지 사용법</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>로컬 스토리지 사용법</h1>
+    <script>
+      console.log('로컬 스토리지 사용하기');
+      //// 로컬 스토리지에 저장하기
+      localStorage.setItem('id', '빼빼로');
+      //// 로컬 스토리지에 저장된 값 가져오기
+      const value = localStorage.getItem('id');
+      console.log(value);
+
+      //// 2. ===============================
+      obj = {
+        name: '홍길동',
+        age: 25,
+      };
+      // 로컬 스토리지에 저장하기
+      // localStorage.setItem('obj', obj)
+      //// [객체를 JSON으로 변환]
+      //// : object type => JSON
+      //// : 직렬화
+      //// : JSON.stringify(객체)
+      obj_string = JSON.stringify(obj);
+      console.log('obj >> ', obj);
+      console.log('typeof obj >> ', typeof obj);
+      console.log('obj_string >> ', obj_string);
+      console.log('typeof obj_string >> ', typeof obj_string);
+      
+      localStorage.setItem('obj', obj_string);
+      // 그냥 덮어써짐
+      // localStorage.setItem('obj', '안녕');
+    
+      //// [JSON을 객체로 변환]
+      //// : 역직렬화
+      //// : JSON.parse(json)
+      obj_value = JSON.parse(localStorage.getItem('obj'));
+      console.log('obj_value >> ', obj_value);
+      console.log(obj_value.name);
+
+      // 1970년 1월 1일 0시 0분 0초를 기준으로
+      // 현재까지 경과된 밀리초 반환
+      const time = Date.now();
+      console.log(time);
+    </script>
+  </body>
+</html>

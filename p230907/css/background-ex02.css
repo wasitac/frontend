@@ -1,0 +1,26 @@
+@charset "utf-8";
+.box {
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  margin: 30px;
+  border: 3px solid;
+  background: url(../img/pile-1651945_1280.jpg) no-repeat 50% 50%;
+}
+.box2 {
+  /* 가로세로 꽉차게: 비율 깨짐 */
+  /* background-size: 100% 100%; */
+
+  /* 가로에 맞춰 */
+  /* background-size: auto 100%; */
+
+  /* 잘리더라도 꽉 차게 */
+  /* background-size: cover; */
+
+  /* 안잘리는 선에서 최대한 크게 */
+  background-size: contain;
+
+  background-size: 100px 150px;
+
+  background-position: 100px 10px;
+}

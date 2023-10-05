@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>호이스팅</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>호이스팅(hoisting)</h1>
+    <script>
+      /* 
+      호이스팅이란 스코프(함수) 안에 존재하는 모든 선언들을 
+      해당 스코프(함수)의 최상단으로 끌어올리는 것을 말합니다. */
+      document.write('a_var >> ', a_var);
+      document.write('<br>');
+      document.write('a_hi >> ', a_hi);
+      document.write('<br>');
+      var a_var;
+      document.write('a_var 변수 선언 후');
+      document.write('<br>');
+      document.write('a_var >> ', a_var);
+      document.write('<br>');
+
+      var a_hi = '안녕~~';
+      document.write('a_hi >> ', a_hi);
+      document.write('<br>');
+
+      var a_var = '변수야!';
+      document.write('a_var >> ', a_var);
+      document.write('<br>');
+      var a_var = '철수야!';
+      document.write('a_var >> ', a_var);
+      document.write('<br>');
+      document.write('...종료...');
+    </script>
+  </body>
+</html>

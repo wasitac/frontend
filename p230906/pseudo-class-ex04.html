@@ -1,0 +1,43 @@
+<!-- 
+  first-child
+  first-of-type
+ -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>가상 클래스</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* ul의 첫 자식이 li가 아니면 작동 안함. */
+      /* ul>li:first-child */
+      ul > li:first-of-type {
+        background-color: yellow;
+      }
+      li:nth-of-type(2n) {
+        background-color: bisque;
+      }
+      li:last-of-type {
+        background-color:fuchsia;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <ol>
+        <li>추가된 리스트1</li>
+        <li>추가된 리스트2</li>
+      </ol>
+      <li>첫번째</li>
+      <li>두번째</li>
+      <li>세번째</li>
+      <li>네번째</li>
+      <li>다섯번째</li>
+    </ul>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi aspernatur corrupti dignissimos veniam deserunt
+      odit, ullam dicta cupiditate, quam quaerat asperiores a soluta possimus! Reiciendis odit nostrum eum accusamus
+      quibusdam!
+    </p>
+  </body>
+</html>

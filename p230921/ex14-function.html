@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>inner function</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>inner function</h1>
+    <script>
+      // [중첩 함수]
+      function loopHello() {
+        let count = 0;
+        // setInterval(함수명, 시간);
+        let printHello = function () {
+          count++;
+          document.write(count + ' : Hello' + '<br>');
+
+          if(count == 10){
+            clearInterval(s);
+          }
+        };
+        var s = setInterval(printHello, 1000);
+      }
+      loopHello();
+    </script>
+  </body>
+</html>
