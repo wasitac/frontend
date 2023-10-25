@@ -70,7 +70,6 @@
           } else {
             setErrorMessage("");
           }
-
           setValue(userValue);
         }
 
@@ -80,8 +79,6 @@
           if (!value.trim()) {
             setErrorMessage("값이 없으므로 추가할 수 없습니다");
             return;
-          } else {
-            setErrorMessage("");
           }
 
           if (errorMessage == "") {
@@ -117,7 +114,7 @@
             />
             <button onClick={props.handleHeartClick}>
               {heartIcon}
-              {props.children}
+              {props.heartCounter}
             </button>
           </div>
         );
@@ -155,11 +152,13 @@
         const foodOne = "img/food-one.jpg";
         const foodTwo = "img/food-two.jpg";
         const foodThree = "img/food-three.jpg";
+        const food = [foodOne, foodTwo, foodThree];
         const [mainFood, setMainFood] = React.useState(foodOne);
 
         // const [favorites, setFavorites] = React.useState(
         //   jsonLocalStorage.getItem("favorites") || []
         // );
+        // lazy init state
         const [favorites, setFavorites] = React.useState(() => {
           const initialState = jsonLocalStorage.getItem("favorites") || [];
           return initialState;
@@ -188,12 +187,9 @@
           setCounter((pre) => {
             const nextCounter = pre + 1;
             jsonLocalStorage.setItem("counter", nextCounter);
+            setMainFood(food[nextCounter % 3]);
             return nextCounter;
           });
-          const food = [foodOne, foodTwo, foodThree];
-          setMainFood((pre => {
-            const nextFood = pre+1
-          }));
         }
 
         function handleHeartClick(event) {
@@ -218,8 +214,8 @@
               src={mainFood}
               handleHeartClick={handleHeartClick}
               choiceFavorites={choiceFavorites}
+              heartCounter={heartCounter}
             >
-              {heartCounter}
             </MainCard>
             <Favorites favorites={favorites} />
           </div>

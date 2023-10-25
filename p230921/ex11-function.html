@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<title>함수 선언식과 함수 표현식의 생성과 실행순서</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<h1>함수 선언식과 함수 표현식의 생성과 실행순서</h1>
-<script>
-  /* 
+  <head>
+    <title>함수 선언식과 함수 표현식의 생성과 실행순서</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>함수 선언식과 함수 표현식의 생성과 실행순서</h1>
+    <script>
+      /* 
   [생성 순서] 함수선언식 -> 함수 표현식
   [실행 순서] 함수표현식
   */
-  // [함수 표현식] 익명함수를 변수에 저장
-  // 메모리 사용이 효율적이
-  var hi = function(name) {
-    document.write(name + ', 안녕~ [함수 표현식]');
-    document.write('<br>');
-  }
-  
-  // [함수 선언식] 일반함수
-  function hi(name) {
-    document.write(name + ', 안녕~ [함수 선언식]');
-    document.write('<br>');
-  }
+      // [함수 표현식] 익명함수를 변수에 저장
+      // 메모리 사용이 효율적이
+      // [함수 선언식] 일반함수
+      function hi(name) {
+        document.write(name + ", 안녕~ [함수 선언식]");
+        document.write("<br>");
+      }
+      var hi = function (name) {
+        document.write(name + ", 안녕~ [함수 표현식]");
+        document.write("<br>");
+      };
 
-  document.write('함수 호출 시작');
-  hi('홍길동');
-  document.write('함수 호출 종료');
-
-</script>
-</body>
+      document.write("함수 호출 시작");
+      hi("홍길동");
+      document.write("함수 호출 종료");
+    </script>
+  </body>
 </html>
