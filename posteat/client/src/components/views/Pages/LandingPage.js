@@ -1,8 +1,14 @@
 import React from "react";
+import { Content } from "antd/es/layout/layout";
 
 const LandingPage = () => {
   return (
     <div>
+      <Content
+              style={{
+                padding: "0 50px",
+              }}
+            >
         <div style={{ width: "100%" }}>
           {/* main image */}
           <div style={{ width: "85%", margin: "0 auto" }}>
@@ -14,6 +20,7 @@ const LandingPage = () => {
             <button>더보기</button>
           </div>
         </div>
+        </Content>
     </div>
   );
 };

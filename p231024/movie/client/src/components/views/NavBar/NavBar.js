@@ -2,7 +2,7 @@ import { Layout, Menu } from "antd";
 import React from "react";
 const { Header } = Layout;
 const Navbar = () => {
-  const menu_list = ["로고", "메뉴1"];
+  const menu_list = ["로고", "메뉴1", "메뉴2"];
   return (
     <Layout className="layout">
       <Header
@@ -15,12 +15,12 @@ const Navbar = () => {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={["로고"]}
+          defaultSelectedKeys={["0"]}
           items={menu_list.map((value, index) => {
-            const key = value;
+            const key = index;
             return {
               key,
-              label: `${key}`,
+              label: `${value}`,
             };
           })}
         />

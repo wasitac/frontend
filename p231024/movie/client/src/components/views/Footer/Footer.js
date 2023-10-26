@@ -11,7 +11,8 @@ const Footer = () => {
         color: "#FFF",
         display: "grid",
         alignContent: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: '20px'
       }}
     >
       <div>

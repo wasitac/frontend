@@ -13,7 +13,6 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/items" element={<Items />} />
           </Routes>
         </Router>
       </div>
