@@ -1,23 +1,34 @@
-import { Row } from "antd";
 import React, { useEffect, useState } from "react";
 import { API_KEY, API_URL, IMAGE_BASE_URL } from "../../Config";
 import MainImage from "../MainImage/MainImage";
-import GridCard from "../commons/GridCard";
+import AntCard from "../commons/AntCard";
+import { Row, Button } from "antd";
 
 const LandingPage = () => {
   const [Movies, setMovies] = useState([]);
   // 페이지의 첫 번째 영화 정보 저장
   const [MainMovieImage, setMainMovieImage] = useState(null);
+  const [CurrentPage, setCurrentPage] = useState(1);
 
-  useEffect(() => {
-    const endpoint = `${API_URL}popular?api_key=${API_KEY}&language=en-US`;
+  function fetchMovies(CurrentPage) {
+    const endpoint = `${API_URL}popular?api_key=${API_KEY}&language=en-US&page=${CurrentPage}`;
     fetch(endpoint)
       .then((response) => response.json())
       .then((response) => {
-        setMovies(response.results);
-        setMainMovieImage(Movies[3]);
+        // setMovies(Movies.concat(response.results));
+        setMovies([...Movies, ...response.results]);
+        setMainMovieImage(response.results[0]);
+        setCurrentPage(CurrentPage + 1);
       });
-  }, [Movies]);
+  }
+
+  useEffect(() => {
+    fetchMovies(CurrentPage);
+  }, []); //뒤에 배열이 오면 한번만 실행(의존성 배열)
+
+  const loadMoreItems = () => {
+    fetchMovies(CurrentPage);
+  };
 
   return (
     <>
@@ -35,13 +46,15 @@ const LandingPage = () => {
           <hr />
           {/* movie grid card */}
           <Row gutter={[10, 10]}>
-            {Movies.map(value => {
+            {Movies.map((value) => {
               return (
-                // 반복생성되는 요소를 묶어주고 key를 생성해준다
+                // 반복생성되는 요소를 묶어주고 key를 생성해준다. <></>로 단축 가능
                 <React.Fragment key={value.id}>
-                  <GridCard
+                  <AntCard
+                    landingPage
                     path={`${IMAGE_BASE_URL}w400${value.poster_path}`}
                     title={value.title}
+                    movieId={value.id}
                   />
                 </React.Fragment>
               );
@@ -49,7 +62,7 @@ const LandingPage = () => {
           </Row>
         </div>
         <div style={{ textAlign: "center", display: "inlineBlock" }}>
-          <button>더보기</button>
+          <Button onClick={loadMoreItems}>더보기</Button>
         </div>
       </div>
     </>

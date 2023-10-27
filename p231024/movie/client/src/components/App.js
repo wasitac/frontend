@@ -1,9 +1,8 @@
-import NavBar from "./views/NavBar/NavBar";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Footer from "./views/Footer/Footer";
 import LandingPage from "./views/LandingPage/LandingPage";
-import Items from "./views/Items/Items";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import NavBar from "./views/NavBar/NavBar";
+import Detail from "./views/Detail/Detail";
 function App() {
   return (
     <div className="App">
@@ -13,6 +12,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            {/* 경로에 ':'가 붙으면 변수취급 */}
+            <Route path={"/movie/:movieId"} element={<Detail />} />
           </Routes>
         </Router>
       </div>

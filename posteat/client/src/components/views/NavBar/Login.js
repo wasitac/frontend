@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from 'antd';
 
 function Login() {
   const isLogin = () => {
@@ -7,7 +8,7 @@ function Login() {
   };
   return (
     <div style={{ position: "absolute", right: "30px" }}>
-      <a href="http://localhost:3000/signin">{isLogin()}</a>
+      <Button>{isLogin()}</Button>
     </div>
   );
 }
