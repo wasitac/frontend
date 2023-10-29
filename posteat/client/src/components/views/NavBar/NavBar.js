@@ -1,9 +1,23 @@
 import React from "react";
 import { Layout, Menu } from "antd";
-import Login from "./Login";
+import Login from "./LoginButton";
+import SearchInput from "./SearchInput";
+import { useParams } from "react-router";
 const { Header } = Layout;
+
 function NavBar() {
-  const menu_list = ["로고", "가게", "내정보"];
+  const { userId } = useParams();
+  const items = [
+    {
+      label: <a href="/">가게</a>,
+      key: "stores",
+    },
+    {
+      label: <a href={`/userinfo/${userId}`}>내정보</a>,
+      key: "userInfo",
+    },
+  ];
+
   return (
     <div>
       <Header
@@ -17,14 +31,9 @@ function NavBar() {
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={["가게"]}
-          items={menu_list.map((value) => {
-            const key = value;
-            return {
-              key,
-              label: `${key}`,
-            };
-          })}
+          items={items}
         />
+        <SearchInput></SearchInput>
         <Login />
       </Header>
     </div>

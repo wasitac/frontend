@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from 'antd';
+import { Button } from "antd";
 
 function Login() {
   const isLogin = () => {
@@ -7,9 +7,9 @@ function Login() {
     return "로그인";
   };
   return (
-    <div style={{ position: "absolute", right: "30px" }}>
-      <Button>{isLogin()}</Button>
-    </div>
+    <Button style={{ position: "absolute", right: "30px" }} href="/login">
+      {isLogin()}
+    </Button>
   );
 }
 
