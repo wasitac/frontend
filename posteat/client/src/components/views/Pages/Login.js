@@ -7,6 +7,7 @@ const onFinish = (values) => {
 const onFinishFailed = (errorInfo) => {
   console.log("Failed:", errorInfo);
 };
+<<<<<<< HEAD
 const Login = () => (
   <Form
     name="basic"
@@ -84,4 +85,85 @@ const Login = () => (
     </Form.Item>
   </Form>
 );
+=======
+const Login = () => {
+  return (
+    <Form
+      name="basic"
+      labelCol={{
+        span: 8,
+      }}
+      wrapperCol={{
+        span: 16,
+      }}
+      style={{
+        maxWidth: 600,
+        width: "60%",
+        margin: "15% auto",
+      }}
+      initialValues={{
+        remember: true,
+      }}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+      autoComplete="off"
+    >
+      <h2 style={{ textAlign: "center" }}>로그인</h2>
+      <Form.Item
+        label="ID"
+        name="ID"
+        rules={[
+          {
+            required: true,
+            message: "Please input your ID!",
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+
+      <Form.Item
+        label="Password"
+        name="password"
+        rules={[
+          {
+            required: true,
+            message: "Please input your password!",
+          },
+        ]}
+      >
+        <Input.Password />
+      </Form.Item>
+
+      <Form.Item
+        name="remember"
+        valuePropName="checked"
+        wrapperCol={{
+          offset: 8,
+          span: 16,
+        }}
+      >
+        <Checkbox>로그인 정보 기억하기</Checkbox>
+      </Form.Item>
+
+      <Form.Item
+        wrapperCol={{
+          offset: 8,
+          span: 16,
+        }}
+      >
+        <Button type="primary" htmlType="submit">
+          로그인
+        </Button>
+
+        <div>
+          <a href="/signup">회원이 아니신가요?</a>
+          <br></br>
+          {/* <a href="/#!">비밀번호를 잊어버리셨나요?</a> */}
+        </div>
+      </Form.Item>
+    </Form>
+  );
+};
+>>>>>>> 5842ca2622701758cc130ba6892ecdc3cc0ef7e7
 export default Login;

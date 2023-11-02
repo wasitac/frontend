@@ -3,10 +3,21 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
+<<<<<<< HEAD
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
       <App />
+=======
+import { RecoilRoot } from "recoil";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <RecoilRoot>
+      <App />
+    </RecoilRoot>
+>>>>>>> 5842ca2622701758cc130ba6892ecdc3cc0ef7e7
   </React.StrictMode>
 );
 

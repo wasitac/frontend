@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MainImage from "../MainImage/MainImage";
 import MovieInfo from "./MovieInfo";
-import { useParams, useNavigate } from "react-router";
+import { useParams, useNavigate } from "react-router-dom";
 import { API_KEY, API_URL, IMAGE_BASE_URL } from "../../Config";
 import ActorsGrid from "./ActorsGrid";
 import { Button } from "antd";

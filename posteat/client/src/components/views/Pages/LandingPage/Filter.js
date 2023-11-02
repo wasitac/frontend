@@ -1,5 +1,6 @@
 import React from "react";
 import { Select } from "antd";
+<<<<<<< HEAD
 
 const options = [
   {
@@ -36,6 +37,19 @@ const Filter = () => (
       style={{
         width: 200,
         marginBottom: "5px",
+=======
+import Category from "./Category";
+
+const Filter = () => (
+  <div style={{ margin: "5px" }}>
+    <Category />
+    <br />
+    <Select
+      showSearch
+      style={{
+        width: "200px",
+        marginTop: "10px",
+>>>>>>> 5842ca2622701758cc130ba6892ecdc3cc0ef7e7
       }}
       placeholder="정렬 기준"
       optionFilterProp="children"

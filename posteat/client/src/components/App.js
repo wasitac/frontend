@@ -11,6 +11,7 @@ import SignUp from "./views/Pages/SignUp";
 
 const App = () => {
   return (
+<<<<<<< HEAD
     <Layout className="layout">
       <NavBar />
       <div style={{ minHeight: "calc(100vh - 64px)" }}>
@@ -26,6 +27,24 @@ const App = () => {
       </div>
       <Footer />
     </Layout>
+=======
+      <Layout className="layout">
+        <NavBar />
+        <div style={{ minHeight: "calc(100vh - 64px)" }}>
+          <Router>
+            <Routes>
+              <Route path="/posteat" element={<LandingPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/store/:storeId" element={<StoreDetail />} />
+              <Route path="/userinfo/:userId" element={<UserInfo />} />
+              <Route path="/signup" element={<SignUp />} />
+            </Routes>
+          </Router>
+        </div>
+        <Footer />
+      </Layout>
+
+>>>>>>> 5842ca2622701758cc130ba6892ecdc3cc0ef7e7
   );
 };
 

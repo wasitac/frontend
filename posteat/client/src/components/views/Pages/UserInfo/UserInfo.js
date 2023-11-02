@@ -5,10 +5,18 @@ import { UserOutlined, SettingOutlined, LikeOutlined } from "@ant-design/icons";
 
 const confirmQuit = () => {
   if (window.confirm("정말 탈퇴하시겠습니까?")) {
+<<<<<<< HEAD
     var nameToQuit = window.prompt(
       "이름을 입력하고 확인을누르면 탈퇴가 완료됩니다."
     );
     // 이름을 비교하고 탈퇴 진행
+=======
+    var nameToCompare = window.prompt(
+      "이름을 입력하고 확인을누르면 탈퇴가 완료됩니다."
+    );
+    // 이름을 비교하고 탈퇴 진행
+    console.log(nameToCompare);
+>>>>>>> 5842ca2622701758cc130ba6892ecdc3cc0ef7e7
   }
 };
 
@@ -33,6 +41,7 @@ const tabList = [
 
 const contentList = {
   dibs: (
+<<<<<<< HEAD
     <Row gutter={[10, 10]}>
       {new Array(20).fill(null).map((_, index) => {
         return (
@@ -73,11 +82,29 @@ const contentList = {
         );
       })}
     </Row>
+=======
+    <GridCard
+      type="UserDibStores"
+    />
+  ),
+  follower: (
+    <GridCard
+      type="UserProfile"
+    />
+  ),
+  following: (
+    <GridCard
+      type="UserProfile"
+    />
+>>>>>>> 5842ca2622701758cc130ba6892ecdc3cc0ef7e7
   ),
   //
   setting: (
     <>
+<<<<<<< HEAD
       
+=======
+>>>>>>> 5842ca2622701758cc130ba6892ecdc3cc0ef7e7
       <Button type="primary" danger onClick={confirmQuit}>
         탈퇴하기
       </Button>
@@ -143,6 +170,7 @@ const UserInfo = () => {
         }}
       >
         {contentList[activeTabKey]}
+<<<<<<< HEAD
         <div
           style={{
             textAlign: "center",
@@ -152,6 +180,9 @@ const UserInfo = () => {
         >
           <Button>더보기</Button>
         </div>
+=======
+        
+>>>>>>> 5842ca2622701758cc130ba6892ecdc3cc0ef7e7
       </Card>
     </div>
   );

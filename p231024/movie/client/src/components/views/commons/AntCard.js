@@ -5,11 +5,6 @@ const AntCard = (props) => {
   if (props.landingPage) {
     return (
       <Col xs={12} md={6} lg={4}>
-        {/* <div>
-          <a href={`/movie/${props.movieId}`}>
-            <img style={{ width: "100%" }} src={props.path} alt={props.title} />
-          </a>
-        </div> */}
         <a href={`/movie/${props.movieId}`}>
           <Card
             hoverable
