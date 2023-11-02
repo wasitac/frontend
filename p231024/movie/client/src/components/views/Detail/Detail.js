@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useSyncExternalStore } from "react";
+import React, { useEffect, useState } from "react";
 import MainImage from "../MainImage/MainImage";
 import MovieInfo from "./MovieInfo";
 import { useParams, useNavigate } from "react-router";
